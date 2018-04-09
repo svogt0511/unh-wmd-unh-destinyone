@@ -224,7 +224,7 @@ return(d1pdt_courseView_officialCourseDescriptionPane($data->nid));
   $handler->display->display_options['fields']['title_1']['element_type'] = 'h2';
   $handler->display->display_options['fields']['title_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title_1']['link_to_node'] = FALSE;
-  /* Field: Content: Address */
+  /* Field: Content: Address (Travel & Site) */
   $handler->display->display_options['fields']['field_course_address']['id'] = 'field_course_address';
   $handler->display->display_options['fields']['field_course_address']['table'] = 'field_data_field_course_address';
   $handler->display->display_options['fields']['field_course_address']['field'] = 'field_course_address';
