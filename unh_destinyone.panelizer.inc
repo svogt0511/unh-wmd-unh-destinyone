@@ -665,6 +665,46 @@ if (empty($field) && empty($field1)) {
   $display->content['new-889c8992-2a02-4aa1-9112-c9f5a3962f22'] = $pane;
   $display->panels['lefttop'][2] = 'new-889c8992-2a02-4aa1-9112-c9f5a3962f22';
   $pane = new stdClass();
+  $pane->pid = 'new-11637b1c-bf34-4f1b-ac7e-8d0fd437695e';
+  $pane->panel = 'lefttop';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'course-panel_pane_3';
+  $pane->shown = TRUE;
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'php',
+        'settings' => array(
+          'description' => 'Hide Tools and Materials Tab (if no available content)',
+          'php' => '$node = node_load($contexts[\'panelizer\']->data->nid);
+$field = field_get_items(\'node\', $node, \'field_tools_materials\');
+if (empty($field)) {
+  return FALSE;
+} else {
+  return TRUE;
+}',
+        ),
+        'not' => FALSE,
+      ),
+    ),
+  );
+  $pane->configuration = array(
+    'override_title' => 0,
+    'override_title_text' => 'What to Bring',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 3;
+  $pane->locks = array();
+  $pane->uuid = '11637b1c-bf34-4f1b-ac7e-8d0fd437695e';
+  $display->content['new-11637b1c-bf34-4f1b-ac7e-8d0fd437695e'] = $pane;
+  $display->panels['lefttop'][3] = 'new-11637b1c-bf34-4f1b-ac7e-8d0fd437695e';
+  $pane = new stdClass();
   $pane->pid = 'new-1a86949a-6115-4958-bb54-c0270435047d';
   $pane->panel = 'right';
   $pane->type = 'course_sections_pane';
