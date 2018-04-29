@@ -745,6 +745,25 @@ if (empty($field)) {
   $display->content['new-b5084306-a7c9-4abd-a0e1-555991e680cb'] = $pane;
   $display->panels['lefttop'][4] = 'new-b5084306-a7c9-4abd-a0e1-555991e680cb';
   $pane = new stdClass();
+  $pane->pid = 'new-b7dac23c-ca04-49b5-be07-264aa345aee1';
+  $pane->panel = 'lefttop';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'course-panel_pane_6';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 5;
+  $pane->locks = array();
+  $pane->uuid = 'b7dac23c-ca04-49b5-be07-264aa345aee1';
+  $display->content['new-b7dac23c-ca04-49b5-be07-264aa345aee1'] = $pane;
+  $display->panels['lefttop'][5] = 'new-b7dac23c-ca04-49b5-be07-264aa345aee1';
+  $pane = new stdClass();
   $pane->pid = 'new-1a86949a-6115-4958-bb54-c0270435047d';
   $pane->panel = 'right';
   $pane->type = 'course_sections_pane';
