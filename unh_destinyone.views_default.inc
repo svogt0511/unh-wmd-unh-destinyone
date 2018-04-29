@@ -223,7 +223,7 @@ return(d1pdt_courseView_officialCourseDescriptionPane($data->nid));
   $handler->display->display_options['fields']['view']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['view']['view'] = 'course';
   $handler->display->display_options['fields']['view']['display'] = 'panel_pane_9';
-  /* Field: Content: Address */
+  /* Field: Content: Address (Travel & Site) */
   $handler->display->display_options['fields']['field_course_address']['id'] = 'field_course_address';
   $handler->display->display_options['fields']['field_course_address']['table'] = 'field_data_field_course_address';
   $handler->display->display_options['fields']['field_course_address']['field'] = 'field_course_address';
@@ -335,6 +335,15 @@ return(d1pdt_courseView_officialCourseDescriptionPane($data->nid));
   $handler->display->display_options['fields']['view']['view'] = 'person';
   $handler->display->display_options['fields']['view']['display'] = 'panel_pane_1';
   $handler->display->display_options['fields']['view']['arguments'] = '[!nid]';
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 0;
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 0;
 
   /* Display: Course Testimonials Tab (pane) */
   $handler = $view->new_display('panel_pane', 'Course Testimonials Tab (pane)', 'panel_pane_6');

@@ -705,6 +705,46 @@ if (empty($field)) {
   $display->content['new-11637b1c-bf34-4f1b-ac7e-8d0fd437695e'] = $pane;
   $display->panels['lefttop'][3] = 'new-11637b1c-bf34-4f1b-ac7e-8d0fd437695e';
   $pane = new stdClass();
+  $pane->pid = 'new-b5084306-a7c9-4abd-a0e1-555991e680cb';
+  $pane->panel = 'lefttop';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'course-panel_pane_5';
+  $pane->shown = TRUE;
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'php',
+        'settings' => array(
+          'description' => 'Hide Instructor Bios Tab (if no available content)',
+          'php' => '$node = node_load($contexts[\'panelizer\']->data->nid);
+$field = field_get_items(\'node\', $node, \'field_instructor_bio\');
+if (empty($field)) {
+  return FALSE;
+} else {
+  return TRUE;
+}',
+        ),
+        'not' => FALSE,
+      ),
+    ),
+  );
+  $pane->configuration = array(
+    'override_title' => 0,
+    'override_title_text' => 'Program Staff',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 4;
+  $pane->locks = array();
+  $pane->uuid = 'b5084306-a7c9-4abd-a0e1-555991e680cb';
+  $display->content['new-b5084306-a7c9-4abd-a0e1-555991e680cb'] = $pane;
+  $display->panels['lefttop'][4] = 'new-b5084306-a7c9-4abd-a0e1-555991e680cb';
+  $pane = new stdClass();
   $pane->pid = 'new-1a86949a-6115-4958-bb54-c0270435047d';
   $pane->panel = 'right';
   $pane->type = 'course_sections_pane';
