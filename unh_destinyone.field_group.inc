@@ -309,7 +309,7 @@ function unh_destinyone_field_group_info() {
   $field_groups['group_instructor_bios|node|course|form'] = $field_group;
 
   $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->disabled = TRUE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_locations|node|course|form';
   $field_group->group_name = 'group_locations';

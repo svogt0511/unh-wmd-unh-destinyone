@@ -1336,153 +1336,6 @@ function unh_destinyone_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-course-field_loc_address'.
-  $field_instances['node-course-field_loc_address'] = array(
-    'bundle' => 'course',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Type address info into this field.  Google map will be generated.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 16,
-      ),
-      'secondary_display' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_loc_address',
-    'label' => 'Address (Locations)',
-    'required' => 0,
-    'settings' => array(
-      'linkit' => array(
-        'button_text' => 'Search',
-        'enable' => 0,
-        'profile' => '',
-      ),
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'multiple_value_widget' => 'blocks',
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 64,
-    ),
-  );
-
-  // Exported field_instance: 'node-course-field_location'.
-  $field_instances['node-course-field_location'] = array(
-    'bundle' => 'course',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 11,
-      ),
-      'secondary_display' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_location',
-    'label' => 'Location',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 66,
-    ),
-  );
-
-  // Exported field_instance: 'node-course-field_location_information'.
-  $field_instances['node-course-field_location_information'] = array(
-    'bundle' => 'course',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 17,
-      ),
-      'secondary_display' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_location_information',
-    'label' => 'Location Information',
-    'required' => 0,
-    'settings' => array(
-      'linkit' => array(
-        'button_text' => 'Search',
-        'enable' => 1,
-        'profile' => 'default_fields',
-      ),
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'multiple_value_widget' => 'table',
-        'rows' => 5,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 65,
-    ),
-  );
-
   // Exported field_instance: 'node-course-field_more_info_webform'.
   $field_instances['node-course-field_more_info_webform'] = array(
     'bundle' => 'course',
@@ -3563,7 +3416,6 @@ function unh_destinyone_field_default_field_instances() {
   t('A place to link to housing information, either uploaded to the local web server or on an external web server (e.g., box).');
   t('A place to link to required forms, either uploaded to the local web server or on an external web server (e.g., box).  The title field is required for these links.');
   t('Address');
-  t('Address (Locations)');
   t('Address (Travel & Site)');
   t('Agenda');
   t('All DestinyOne courses need a course code.   The course code is the link between the Drupal course node and the corresponding  DestinyOne course data.  The course code is filled in automatically by choosing from the autocomplete drop down as you are typing in the course title.');
@@ -3598,7 +3450,6 @@ function unh_destinyone_field_default_field_instances() {
   t('Keywords');
   t('Last Name');
   t('Location');
-  t('Location Information');
   t('Middle Initial');
   t('More Information Form');
   t('Overview');
@@ -3624,7 +3475,6 @@ function unh_destinyone_field_default_field_instances() {
   t('Tools & Materials');
   t('Travel & Site Information');
   t('Type');
-  t('Type address info into this field.  Google map will be generated.');
   t('Used to allow non-DestinyOne courses to be part of the keyword search.');
   t('Used to label the location in the right rail and elsewhere.');
   t('Video');
