@@ -584,6 +584,29 @@ if (empty($field)) {
   $display->content['new-cb4cb80a-c96f-4dd5-b431-329fb957dac0'] = $pane;
   $display->panels['lefttop'][0] = 'new-cb4cb80a-c96f-4dd5-b431-329fb957dac0';
   $pane = new stdClass();
+  $pane->pid = 'new-f6c68e06-07e4-4a3a-8202-dda0f0eaf7d2';
+  $pane->panel = 'lefttop';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'course-panel_pane_2';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 1,
+    'override_title_text' => 'What You Will Learn',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = 'f6c68e06-07e4-4a3a-8202-dda0f0eaf7d2';
+  $display->content['new-f6c68e06-07e4-4a3a-8202-dda0f0eaf7d2'] = $pane;
+  $display->panels['lefttop'][1] = 'new-f6c68e06-07e4-4a3a-8202-dda0f0eaf7d2';
+  $pane = new stdClass();
   $pane->pid = 'new-1a86949a-6115-4958-bb54-c0270435047d';
   $pane->panel = 'right';
   $pane->type = 'course_sections_pane';
