@@ -589,7 +589,24 @@ if (empty($field)) {
   $pane->type = 'views_panes';
   $pane->subtype = 'course-panel_pane_2';
   $pane->shown = TRUE;
-  $pane->access = array();
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'php',
+        'settings' => array(
+          'description' => 'Hide What You Will Learn Tab (if no available content)',
+          'php' => '$node = node_load($contexts[\'panelizer\']->data->nid);
+$field = field_get_items(\'node\', $node, \'field_what_you_will_learn\');
+if (empty($field)) {
+  return FALSE;
+} else {
+  return TRUE;
+}',
+        ),
+        'not' => FALSE,
+      ),
+    ),
+  );
   $pane->configuration = array(
     'override_title' => 1,
     'override_title_text' => 'What You Will Learn',
@@ -606,6 +623,47 @@ if (empty($field)) {
   $pane->uuid = 'f6c68e06-07e4-4a3a-8202-dda0f0eaf7d2';
   $display->content['new-f6c68e06-07e4-4a3a-8202-dda0f0eaf7d2'] = $pane;
   $display->panels['lefttop'][1] = 'new-f6c68e06-07e4-4a3a-8202-dda0f0eaf7d2';
+  $pane = new stdClass();
+  $pane->pid = 'new-889c8992-2a02-4aa1-9112-c9f5a3962f22';
+  $pane->panel = 'lefttop';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'course-panel_pane_4';
+  $pane->shown = TRUE;
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'php',
+        'settings' => array(
+          'description' => 'Hide Travel and Site Info Tab (if no available content)',
+          'php' => '$node = node_load($contexts[\'panelizer\']->data->nid);
+$field = field_get_items(\'node\', $node, \'field_travel_site_information\');
+$field1 = field_get_items(\'node\', $node, \'field_course_address\');
+if (empty($field) && empty($field1)) {
+  return FALSE;
+} else {
+  return TRUE;
+}',
+        ),
+        'not' => FALSE,
+      ),
+    ),
+  );
+  $pane->configuration = array(
+    'override_title' => 0,
+    'override_title_text' => 'Travel Information',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 2;
+  $pane->locks = array();
+  $pane->uuid = '889c8992-2a02-4aa1-9112-c9f5a3962f22';
+  $display->content['new-889c8992-2a02-4aa1-9112-c9f5a3962f22'] = $pane;
+  $display->panels['lefttop'][2] = 'new-889c8992-2a02-4aa1-9112-c9f5a3962f22';
   $pane = new stdClass();
   $pane->pid = 'new-1a86949a-6115-4958-bb54-c0270435047d';
   $pane->panel = 'right';
