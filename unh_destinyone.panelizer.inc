@@ -510,11 +510,16 @@ if (empty($field)) {
     'style_settings' => array(
       'default' => NULL,
       'top' => NULL,
-      'lefttop' => NULL,
+      'lefttop' => array(
+        'tab_type' => 'nav-tabs',
+      ),
       'right' => NULL,
       'bottomleft' => NULL,
       'bottomright' => NULL,
       'bottom' => NULL,
+    ),
+    'lefttop' => array(
+      'style' => 'bootstrap_tabs',
     ),
   );
   $display->cache = array();
@@ -553,28 +558,19 @@ if (empty($field)) {
   $display->content['new-2e80a664-23d4-4016-a25b-d9c6fcf0843d'] = $pane;
   $display->panels['bottom'][0] = 'new-2e80a664-23d4-4016-a25b-d9c6fcf0843d';
   $pane = new stdClass();
-  $pane->pid = 'new-f06c73c6-1f8c-4f46-a83e-15a9e89a2232';
-  $pane->panel = 'top';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
+  $pane->pid = 'new-cb4cb80a-c96f-4dd5-b431-329fb957dac0';
+  $pane->panel = 'lefttop';
+  $pane->type = 'course_overview_pane';
+  $pane->subtype = 'course_overview_pane';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'admin_title' => 'TEST CUSTOM CONTENT',
-    'title' => 'Test Custom Content',
-    'title_heading' => 'h2',
-    'body' => '<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Proin eget tortor risus. Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Proin eget tortor risus. Curabitur aliquet quam id dui posuere blandit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus.</p>
-
-<p>Curabitur aliquet quam id dui posuere blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec rutrum congue leo eget malesuada. Donec rutrum congue leo eget malesuada. Cras ultricies ligula sed magna dictum porta. Nulla porttitor accumsan tincidunt. Donec sollicitudin molestie malesuada. Cras ultricies ligula sed magna dictum porta. Cras ultricies ligula sed magna dictum porta.</p>
-
-<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Cras ultricies ligula sed magna dictum porta. Donec sollicitudin molestie malesuada. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vivamus suscipit tortor eget felis porttitor volutpat. Nulla quis lorem ut libero malesuada feugiat. Sed porttitor lectus nibh. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.</p>
-
-<p>Donec rutrum congue leo eget malesuada. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Cras ultricies ligula sed magna dictum porta. Cras ultricies ligula sed magna dictum porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-<p>Cras ultricies ligula sed magna dictum porta. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Sed porttitor lectus nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Nulla quis lorem ut libero malesuada feugiat. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim.</p>
-',
-    'format' => 'full_html',
-    'substitute' => 1,
+    'override_title' => 1,
+    'override_title_text' => 'Overview',
+    'override_title_heading' => 'h2',
+    'form_build_id' => 'form-e0XlUsP6vv7mdKJeb2zFElMpkCysscdn5RNeDE7KNkA',
+    'form_token' => '_8PCwD0aHHfsCDYLM-wYwAnk3HDOy_PpOVnxuziQSV4',
+    'form_id' => 'course_overview_pane_content_type_edit_form',
   );
   $pane->cache = array();
   $pane->style = array(
@@ -584,10 +580,67 @@ if (empty($field)) {
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
-  $pane->uuid = 'f06c73c6-1f8c-4f46-a83e-15a9e89a2232';
-  $display->content['new-f06c73c6-1f8c-4f46-a83e-15a9e89a2232'] = $pane;
-  $display->panels['top'][0] = 'new-f06c73c6-1f8c-4f46-a83e-15a9e89a2232';
-  $display->hide_title = PANELS_TITLE_FIXED;
+  $pane->uuid = 'cb4cb80a-c96f-4dd5-b431-329fb957dac0';
+  $display->content['new-cb4cb80a-c96f-4dd5-b431-329fb957dac0'] = $pane;
+  $display->panels['lefttop'][0] = 'new-cb4cb80a-c96f-4dd5-b431-329fb957dac0';
+  $pane = new stdClass();
+  $pane->pid = 'new-1a86949a-6115-4958-bb54-c0270435047d';
+  $pane->panel = 'right';
+  $pane->type = 'course_sections_pane';
+  $pane->subtype = 'course_sections_pane';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 1,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+    'section_sort' => array(
+      'sort' => 1,
+      'options' => '0',
+      'direction' => '0',
+    ),
+    'body_section_fields' => array(
+      'section_dates' => array(
+        'show' => 1,
+        'options' => '1',
+      ),
+      'section_times' => array(
+        'show' => 1,
+        'options' => '1',
+      ),
+      'section_tuition' => array(
+        'show' => 1,
+        'label' => 'Cost:',
+        'published_code' => 1,
+      ),
+      'action_button' => 1,
+      'section_locations' => 0,
+      'section_instructors' => 1,
+      'section_contact_hours' => 1,
+      'section_discounts' => 1,
+      'section_notes' => 1,
+      'section_ceus' => 1,
+      'section_course_code' => 1,
+      'section_number' => 1,
+    ),
+    'disp_open' => 0,
+    'section_status_noncached' => 0,
+    'form_build_id' => 'form-hpYnSa7N9gHJw7WiNoS3uRcF-wV_9ZbkXJdbbZ26gj0',
+    'form_token' => 'NhIXqzghppIY55z_-4HzfWo3GP-GcGvbKvbCLIsDW30',
+    'form_id' => 'course_sections_pane_content_type_edit_form',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '1a86949a-6115-4958-bb54-c0270435047d';
+  $display->content['new-1a86949a-6115-4958-bb54-c0270435047d'] = $pane;
+  $display->panels['right'][0] = 'new-1a86949a-6115-4958-bb54-c0270435047d';
+  $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $panelizer->display = $display;
   $export['node:course:juggernaut_display_v55'] = $panelizer;

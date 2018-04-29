@@ -589,7 +589,7 @@ function unh_destinyone_field_default_field_instances() {
     'description' => 'All DestinyOne courses need a course code.   The course code is the link between the Drupal course node and the corresponding  DestinyOne course data.  The course code is filled in automatically by choosing from the autocomplete drop down as you are typing in the course title.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
