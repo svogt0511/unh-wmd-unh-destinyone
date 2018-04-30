@@ -3369,6 +3369,47 @@ function unh_destinyone_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'taxonomy_term-course_search_filters_delivery-field_keyword'.
+  $field_instances['taxonomy_term-course_search_filters_delivery-field_keyword'] = array(
+    'bundle' => 'course_search_filters_delivery',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_keyword',
+    'label' => 'Keyword',
+    'required' => 0,
+    'settings' => array(
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'multiple_value_widget' => 'table',
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance:
   // 'taxonomy_term-course_search_filters_format-field_keyword'.
   $field_instances['taxonomy_term-course_search_filters_format-field_keyword'] = array(
     'bundle' => 'course_search_filters_format',
