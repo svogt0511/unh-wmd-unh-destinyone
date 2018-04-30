@@ -319,44 +319,6 @@ if (empty($field)) {
   $display->content['new-1400bffe-4959-404e-a892-4be8b203aca8'] = $pane;
   $display->panels['lefttop'][6] = 'new-1400bffe-4959-404e-a892-4be8b203aca8';
   $pane = new stdClass();
-  $pane->pid = 'new-97e59417-30ad-496f-887e-849df4a6dd9b';
-  $pane->panel = 'lefttop';
-  $pane->type = 'views_panes';
-  $pane->subtype = 'course-panel_pane_10';
-  $pane->shown = TRUE;
-  $pane->access = array(
-    'plugins' => array(
-      0 => array(
-        'name' => 'php',
-        'settings' => array(
-          'description' => 'Hide Locations (If no available content)',
-          'php' => '$node = node_load($contexts[\'panelizer\']->data->nid);
-$field = field_get_items(\'node\', $node, \'field_loc_address\');
-$field2 = field_get_items(\'node\', $node, \'field_location_information\');
-if (empty($field) && empty($field2)) {
-  return FALSE;
-} else {
-  return TRUE;
-}
-',
-        ),
-        'not' => FALSE,
-      ),
-    ),
-  );
-  $pane->configuration = array();
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 7;
-  $pane->locks = array();
-  $pane->uuid = '97e59417-30ad-496f-887e-849df4a6dd9b';
-  $display->content['new-97e59417-30ad-496f-887e-849df4a6dd9b'] = $pane;
-  $display->panels['lefttop'][7] = 'new-97e59417-30ad-496f-887e-849df4a6dd9b';
-  $pane = new stdClass();
   $pane->pid = 'new-51e12d65-6af6-4402-baf6-f6dbe160c195';
   $pane->panel = 'right';
   $pane->type = 'entity_field';
@@ -510,11 +472,16 @@ if (empty($field)) {
     'style_settings' => array(
       'default' => NULL,
       'top' => NULL,
-      'lefttop' => NULL,
+      'lefttop' => array(
+        'tab_type' => 'nav-tabs',
+      ),
       'right' => NULL,
       'bottomleft' => NULL,
       'bottomright' => NULL,
       'bottom' => NULL,
+    ),
+    'lefttop' => array(
+      'style' => 'bootstrap_tabs',
     ),
   );
   $display->cache = array();
@@ -553,28 +520,19 @@ if (empty($field)) {
   $display->content['new-2e80a664-23d4-4016-a25b-d9c6fcf0843d'] = $pane;
   $display->panels['bottom'][0] = 'new-2e80a664-23d4-4016-a25b-d9c6fcf0843d';
   $pane = new stdClass();
-  $pane->pid = 'new-f06c73c6-1f8c-4f46-a83e-15a9e89a2232';
-  $pane->panel = 'top';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
+  $pane->pid = 'new-cb4cb80a-c96f-4dd5-b431-329fb957dac0';
+  $pane->panel = 'lefttop';
+  $pane->type = 'course_overview_pane';
+  $pane->subtype = 'course_overview_pane';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'admin_title' => 'TEST CUSTOM CONTENT',
-    'title' => 'Test Custom Content',
-    'title_heading' => 'h2',
-    'body' => '<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Proin eget tortor risus. Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Proin eget tortor risus. Curabitur aliquet quam id dui posuere blandit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus.</p>
-
-<p>Curabitur aliquet quam id dui posuere blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec rutrum congue leo eget malesuada. Donec rutrum congue leo eget malesuada. Cras ultricies ligula sed magna dictum porta. Nulla porttitor accumsan tincidunt. Donec sollicitudin molestie malesuada. Cras ultricies ligula sed magna dictum porta. Cras ultricies ligula sed magna dictum porta.</p>
-
-<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Cras ultricies ligula sed magna dictum porta. Donec sollicitudin molestie malesuada. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vivamus suscipit tortor eget felis porttitor volutpat. Nulla quis lorem ut libero malesuada feugiat. Sed porttitor lectus nibh. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.</p>
-
-<p>Donec rutrum congue leo eget malesuada. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Cras ultricies ligula sed magna dictum porta. Cras ultricies ligula sed magna dictum porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-<p>Cras ultricies ligula sed magna dictum porta. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Sed porttitor lectus nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Nulla quis lorem ut libero malesuada feugiat. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim.</p>
-',
-    'format' => 'full_html',
-    'substitute' => 1,
+    'override_title' => 1,
+    'override_title_text' => 'Overview',
+    'override_title_heading' => 'h2',
+    'form_build_id' => 'form-e0XlUsP6vv7mdKJeb2zFElMpkCysscdn5RNeDE7KNkA',
+    'form_token' => '_8PCwD0aHHfsCDYLM-wYwAnk3HDOy_PpOVnxuziQSV4',
+    'form_id' => 'course_overview_pane_content_type_edit_form',
   );
   $pane->cache = array();
   $pane->style = array(
@@ -584,10 +542,407 @@ if (empty($field)) {
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
-  $pane->uuid = 'f06c73c6-1f8c-4f46-a83e-15a9e89a2232';
-  $display->content['new-f06c73c6-1f8c-4f46-a83e-15a9e89a2232'] = $pane;
-  $display->panels['top'][0] = 'new-f06c73c6-1f8c-4f46-a83e-15a9e89a2232';
-  $display->hide_title = PANELS_TITLE_FIXED;
+  $pane->uuid = 'cb4cb80a-c96f-4dd5-b431-329fb957dac0';
+  $display->content['new-cb4cb80a-c96f-4dd5-b431-329fb957dac0'] = $pane;
+  $display->panels['lefttop'][0] = 'new-cb4cb80a-c96f-4dd5-b431-329fb957dac0';
+  $pane = new stdClass();
+  $pane->pid = 'new-f6c68e06-07e4-4a3a-8202-dda0f0eaf7d2';
+  $pane->panel = 'lefttop';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'course-panel_pane_2';
+  $pane->shown = TRUE;
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'php',
+        'settings' => array(
+          'description' => 'Hide What You Will Learn Tab (if no available content)',
+          'php' => '$node = node_load($contexts[\'panelizer\']->data->nid);
+$field = field_get_items(\'node\', $node, \'field_what_you_will_learn\');
+if (empty($field)) {
+  return FALSE;
+} else {
+  return TRUE;
+}',
+        ),
+        'not' => FALSE,
+      ),
+    ),
+  );
+  $pane->configuration = array(
+    'override_title' => 1,
+    'override_title_text' => 'What You Will Learn',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = 'f6c68e06-07e4-4a3a-8202-dda0f0eaf7d2';
+  $display->content['new-f6c68e06-07e4-4a3a-8202-dda0f0eaf7d2'] = $pane;
+  $display->panels['lefttop'][1] = 'new-f6c68e06-07e4-4a3a-8202-dda0f0eaf7d2';
+  $pane = new stdClass();
+  $pane->pid = 'new-889c8992-2a02-4aa1-9112-c9f5a3962f22';
+  $pane->panel = 'lefttop';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'course-panel_pane_4';
+  $pane->shown = TRUE;
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'php',
+        'settings' => array(
+          'description' => 'Hide Travel and Site Info Tab (if no available content)',
+          'php' => '$node = node_load($contexts[\'panelizer\']->data->nid);
+$field = field_get_items(\'node\', $node, \'field_travel_site_information\');
+$field1 = field_get_items(\'node\', $node, \'field_course_address\');
+if (empty($field) && empty($field1)) {
+  return FALSE;
+} else {
+  return TRUE;
+}',
+        ),
+        'not' => FALSE,
+      ),
+    ),
+  );
+  $pane->configuration = array(
+    'override_title' => 0,
+    'override_title_text' => 'Travel Information',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 2;
+  $pane->locks = array();
+  $pane->uuid = '889c8992-2a02-4aa1-9112-c9f5a3962f22';
+  $display->content['new-889c8992-2a02-4aa1-9112-c9f5a3962f22'] = $pane;
+  $display->panels['lefttop'][2] = 'new-889c8992-2a02-4aa1-9112-c9f5a3962f22';
+  $pane = new stdClass();
+  $pane->pid = 'new-11637b1c-bf34-4f1b-ac7e-8d0fd437695e';
+  $pane->panel = 'lefttop';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'course-panel_pane_3';
+  $pane->shown = TRUE;
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'php',
+        'settings' => array(
+          'description' => 'Hide Tools and Materials Tab (if no available content)',
+          'php' => '$node = node_load($contexts[\'panelizer\']->data->nid);
+$field = field_get_items(\'node\', $node, \'field_tools_materials\');
+if (empty($field)) {
+  return FALSE;
+} else {
+  return TRUE;
+}',
+        ),
+        'not' => FALSE,
+      ),
+    ),
+  );
+  $pane->configuration = array(
+    'override_title' => 0,
+    'override_title_text' => 'What to Bring',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 3;
+  $pane->locks = array();
+  $pane->uuid = '11637b1c-bf34-4f1b-ac7e-8d0fd437695e';
+  $display->content['new-11637b1c-bf34-4f1b-ac7e-8d0fd437695e'] = $pane;
+  $display->panels['lefttop'][3] = 'new-11637b1c-bf34-4f1b-ac7e-8d0fd437695e';
+  $pane = new stdClass();
+  $pane->pid = 'new-b5084306-a7c9-4abd-a0e1-555991e680cb';
+  $pane->panel = 'lefttop';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'course-panel_pane_5';
+  $pane->shown = TRUE;
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'php',
+        'settings' => array(
+          'description' => 'Hide Instructor Bios Tab (if no available content)',
+          'php' => '$node = node_load($contexts[\'panelizer\']->data->nid);
+$field = field_get_items(\'node\', $node, \'field_instructor_bio\');
+if (empty($field)) {
+  return FALSE;
+} else {
+  return TRUE;
+}',
+        ),
+        'not' => FALSE,
+      ),
+    ),
+  );
+  $pane->configuration = array(
+    'override_title' => 0,
+    'override_title_text' => 'Program Staff',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 4;
+  $pane->locks = array();
+  $pane->uuid = 'b5084306-a7c9-4abd-a0e1-555991e680cb';
+  $display->content['new-b5084306-a7c9-4abd-a0e1-555991e680cb'] = $pane;
+  $display->panels['lefttop'][4] = 'new-b5084306-a7c9-4abd-a0e1-555991e680cb';
+  $pane = new stdClass();
+  $pane->pid = 'new-b7dac23c-ca04-49b5-be07-264aa345aee1';
+  $pane->panel = 'lefttop';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'course-panel_pane_6';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 5;
+  $pane->locks = array();
+  $pane->uuid = 'b7dac23c-ca04-49b5-be07-264aa345aee1';
+  $display->content['new-b7dac23c-ca04-49b5-be07-264aa345aee1'] = $pane;
+  $display->panels['lefttop'][5] = 'new-b7dac23c-ca04-49b5-be07-264aa345aee1';
+  $pane = new stdClass();
+  $pane->pid = 'new-f5c4e873-e30a-4a7a-8012-e71b61d1d8d9';
+  $pane->panel = 'lefttop';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'course-panel_pane_11';
+  $pane->shown = TRUE;
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'php',
+        'settings' => array(
+          'description' => 'Hide Related Items (If no available content)',
+          'php' => '$node = node_load($contexts[\'panelizer\']->data->nid);
+$field = field_get_items(\'node\', $node, \'field_related_items\');
+if (empty($field)) {
+  return FALSE;
+} else {
+  return TRUE;
+}',
+        ),
+        'not' => FALSE,
+      ),
+    ),
+  );
+  $pane->configuration = array(
+    'override_title' => 0,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 6;
+  $pane->locks = array();
+  $pane->uuid = 'f5c4e873-e30a-4a7a-8012-e71b61d1d8d9';
+  $display->content['new-f5c4e873-e30a-4a7a-8012-e71b61d1d8d9'] = $pane;
+  $display->panels['lefttop'][6] = 'new-f5c4e873-e30a-4a7a-8012-e71b61d1d8d9';
+  $pane = new stdClass();
+  $pane->pid = 'new-313a2ed5-5b26-4d43-a1e0-9bde6556bd1a';
+  $pane->panel = 'lefttop';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'course-panel_pane_12';
+  $pane->shown = TRUE;
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'php',
+        'settings' => array(
+          'description' => 'Hide Agenda Tab (if no available content)',
+          'php' => '$node = node_load($contexts[\'panelizer\']->data->nid);
+$field = field_get_items(\'node\', $node, \'field_agenda\');
+if (empty($field)) {
+  return FALSE;
+} else {
+  return TRUE;
+}',
+        ),
+        'not' => FALSE,
+      ),
+    ),
+  );
+  $pane->configuration = array(
+    'override_title' => 0,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 7;
+  $pane->locks = array();
+  $pane->uuid = '313a2ed5-5b26-4d43-a1e0-9bde6556bd1a';
+  $display->content['new-313a2ed5-5b26-4d43-a1e0-9bde6556bd1a'] = $pane;
+  $display->panels['lefttop'][7] = 'new-313a2ed5-5b26-4d43-a1e0-9bde6556bd1a';
+  $pane = new stdClass();
+  $pane->pid = 'new-6de0d367-e77c-42ab-a4d4-7f437efd350f';
+  $pane->panel = 'lefttop';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'course-panel_pane_13';
+  $pane->shown = TRUE;
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'php',
+        'settings' => array(
+          'description' => 'Hide Speakers Tab (if no available content)',
+          'php' => '$node = node_load($contexts[\'panelizer\']->data->nid);
+$field = field_get_items(\'node\', $node, \'field_speakers\');
+if (empty($field)) {
+  return FALSE;
+} else {
+  return TRUE;
+}',
+        ),
+        'not' => FALSE,
+      ),
+    ),
+  );
+  $pane->configuration = array(
+    'override_title' => 0,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 8;
+  $pane->locks = array();
+  $pane->uuid = '6de0d367-e77c-42ab-a4d4-7f437efd350f';
+  $display->content['new-6de0d367-e77c-42ab-a4d4-7f437efd350f'] = $pane;
+  $display->panels['lefttop'][8] = 'new-6de0d367-e77c-42ab-a4d4-7f437efd350f';
+  $pane = new stdClass();
+  $pane->pid = 'new-58527424-70c1-49ff-9173-bc75fcf15291';
+  $pane->panel = 'lefttop';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'course-panel_pane_15';
+  $pane->shown = TRUE;
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'php',
+        'settings' => array(
+          'description' => 'Hide Speakers Tab (if no available content)',
+          'php' => '$node = node_load($contexts[\'panelizer\']->data->nid);
+$field = field_get_items(\'node\', $node, \'field_speakers\');
+if (empty($field)) {
+  return FALSE;
+} else {
+  return TRUE;
+}',
+        ),
+        'not' => FALSE,
+      ),
+    ),
+  );
+  $pane->configuration = array(
+    'override_title' => 0,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 9;
+  $pane->locks = array();
+  $pane->uuid = '58527424-70c1-49ff-9173-bc75fcf15291';
+  $display->content['new-58527424-70c1-49ff-9173-bc75fcf15291'] = $pane;
+  $display->panels['lefttop'][9] = 'new-58527424-70c1-49ff-9173-bc75fcf15291';
+  $pane = new stdClass();
+  $pane->pid = 'new-1a86949a-6115-4958-bb54-c0270435047d';
+  $pane->panel = 'right';
+  $pane->type = 'course_sections_pane';
+  $pane->subtype = 'course_sections_pane';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 1,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+    'section_sort' => array(
+      'sort' => 1,
+      'options' => '0',
+      'direction' => '0',
+    ),
+    'body_section_fields' => array(
+      'section_dates' => array(
+        'show' => 1,
+        'options' => '1',
+      ),
+      'section_times' => array(
+        'show' => 1,
+        'options' => '1',
+      ),
+      'section_tuition' => array(
+        'show' => 1,
+        'label' => 'Cost:',
+        'published_code' => 1,
+      ),
+      'action_button' => 1,
+      'section_locations' => 0,
+      'section_instructors' => 1,
+      'section_contact_hours' => 1,
+      'section_discounts' => 1,
+      'section_notes' => 1,
+      'section_ceus' => 1,
+      'section_course_code' => 1,
+      'section_number' => 1,
+    ),
+    'disp_open' => 0,
+    'section_status_noncached' => 0,
+    'form_build_id' => 'form-hpYnSa7N9gHJw7WiNoS3uRcF-wV_9ZbkXJdbbZ26gj0',
+    'form_token' => 'NhIXqzghppIY55z_-4HzfWo3GP-GcGvbKvbCLIsDW30',
+    'form_id' => 'course_sections_pane_content_type_edit_form',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '1a86949a-6115-4958-bb54-c0270435047d';
+  $display->content['new-1a86949a-6115-4958-bb54-c0270435047d'] = $pane;
+  $display->panels['right'][0] = 'new-1a86949a-6115-4958-bb54-c0270435047d';
+  $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $panelizer->display = $display;
   $export['node:course:juggernaut_display_v55'] = $panelizer;

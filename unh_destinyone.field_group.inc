@@ -23,10 +23,9 @@ function unh_destinyone_field_group_info() {
     'label' => 'Additional Course Tabs (Non-D1 Course Settings)',
     'weight' => '5',
     'children' => array(
-      0 => 'group_locations',
+      0 => 'group_course_settings',
       1 => 'group_overview',
-      2 => 'group_course_settings',
-      3 => 'group_search_settings',
+      2 => 'group_search_settings',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(
@@ -50,7 +49,7 @@ function unh_destinyone_field_group_info() {
   $field_group->parent_name = 'group_course_tabs';
   $field_group->data = array(
     'label' => 'Agenda',
-    'weight' => '11',
+    'weight' => '10',
     'children' => array(
       0 => 'field_agenda',
     ),
@@ -78,10 +77,10 @@ function unh_destinyone_field_group_info() {
   $field_group->parent_name = 'group_course_tabs';
   $field_group->data = array(
     'label' => 'Associated Files and Forms',
-    'weight' => '9',
+    'weight' => '13',
     'children' => array(
-      0 => 'field_more_info_webform',
-      1 => 'field_brochure_link',
+      0 => 'field_brochure_link',
+      1 => 'field_more_info_webform',
       2 => 'field_required_forms',
       3 => 'field_housing_information',
     ),
@@ -137,7 +136,7 @@ function unh_destinyone_field_group_info() {
   $field_group->parent_name = 'group_course_tabs';
   $field_group->data = array(
     'label' => 'D1 Certificates',
-    'weight' => '13',
+    'weight' => '14',
     'children' => array(
       0 => 'group_certificate_list',
     ),
@@ -198,12 +197,12 @@ function unh_destinyone_field_group_info() {
     'label' => 'Right Rail Settings',
     'weight' => '65',
     'children' => array(
-      0 => 'field_course_enrollment_link',
-      1 => 'field_course_availability',
-      2 => 'field_course_location_name',
-      3 => 'field_course_tuition',
-      4 => 'field_course_contact_hours',
-      5 => 'field_course_ceus',
+      0 => 'field_course_availability',
+      1 => 'field_course_ceus',
+      2 => 'field_course_contact_hours',
+      3 => 'field_course_enrollment_link',
+      4 => 'field_course_location_name',
+      5 => 'field_course_tuition',
       6 => 'group_course_schedule',
     ),
     'format_type' => 'htab',
@@ -231,17 +230,17 @@ function unh_destinyone_field_group_info() {
     'label' => 'Course Tabs',
     'weight' => '4',
     'children' => array(
-      0 => 'group_what_you_will_learn',
-      1 => 'group_tools_and_materials',
-      2 => 'group_instructor_bios',
-      3 => 'group_testimonials',
-      4 => 'group_associated_files_and_forms',
-      5 => 'group_travel_and_site_info',
-      6 => 'group_related_items',
-      7 => 'group_agenda',
-      8 => 'group_speakers',
-      9 => 'group_certificates',
-      10 => 'group_faq',
+      0 => 'group_agenda',
+      1 => 'group_associated_files_and_forms',
+      2 => 'group_certificates',
+      3 => 'group_faq',
+      4 => 'group_instructor_bios',
+      5 => 'group_related_items',
+      6 => 'group_speakers',
+      7 => 'group_testimonials',
+      8 => 'group_tools_and_materials',
+      9 => 'group_travel_and_site_info',
+      10 => 'group_what_you_will_learn',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(
@@ -265,7 +264,7 @@ function unh_destinyone_field_group_info() {
   $field_group->parent_name = 'group_course_tabs';
   $field_group->data = array(
     'label' => 'FAQ',
-    'weight' => '14',
+    'weight' => '12',
     'children' => array(
       0 => 'field_faq',
     ),
@@ -309,7 +308,7 @@ function unh_destinyone_field_group_info() {
   $field_groups['group_instructor_bios|node|course|form'] = $field_group;
 
   $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->disabled = TRUE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_locations|node|course|form';
   $field_group->group_name = 'group_locations';
@@ -321,8 +320,8 @@ function unh_destinyone_field_group_info() {
     'label' => 'Locations',
     'weight' => '67',
     'children' => array(
-      0 => 'field_location',
-      1 => 'field_loc_address',
+      0 => 'field_loc_address',
+      1 => 'field_location',
       2 => 'field_location_information',
     ),
     'format_type' => 'htab',
@@ -375,7 +374,7 @@ function unh_destinyone_field_group_info() {
   $field_group->parent_name = 'group_course_tabs';
   $field_group->data = array(
     'label' => 'Related Items',
-    'weight' => '10',
+    'weight' => '9',
     'children' => array(
       0 => 'field_related_items',
     ),
@@ -405,8 +404,8 @@ function unh_destinyone_field_group_info() {
     'label' => 'Search Settings',
     'weight' => '66',
     'children' => array(
-      0 => 'field_keywords',
-      1 => 'field_filters',
+      0 => 'field_filters',
+      1 => 'field_keywords',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -432,7 +431,7 @@ function unh_destinyone_field_group_info() {
   $field_group->parent_name = 'group_course_tabs';
   $field_group->data = array(
     'label' => 'Speakers',
-    'weight' => '12',
+    'weight' => '11',
     'children' => array(
       0 => 'field_speakers',
     ),
