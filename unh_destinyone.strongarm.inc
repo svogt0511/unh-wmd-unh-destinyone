@@ -83,6 +83,9 @@ function unh_destinyone_strongarm() {
         'redirect' => array(
           'weight' => '7',
         ),
+        'locations' => array(
+          'weight' => '30',
+        ),
       ),
       'display' => array(),
     ),

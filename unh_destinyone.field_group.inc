@@ -24,9 +24,8 @@ function unh_destinyone_field_group_info() {
     'weight' => '5',
     'children' => array(
       0 => 'group_course_settings',
-      1 => 'group_locations',
-      2 => 'group_overview',
-      3 => 'group_search_settings',
+      1 => 'group_overview',
+      2 => 'group_search_settings',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(
@@ -50,7 +49,7 @@ function unh_destinyone_field_group_info() {
   $field_group->parent_name = 'group_course_tabs';
   $field_group->data = array(
     'label' => 'Agenda',
-    'weight' => '11',
+    'weight' => '10',
     'children' => array(
       0 => 'field_agenda',
     ),
@@ -78,7 +77,7 @@ function unh_destinyone_field_group_info() {
   $field_group->parent_name = 'group_course_tabs';
   $field_group->data = array(
     'label' => 'Associated Files and Forms',
-    'weight' => '9',
+    'weight' => '13',
     'children' => array(
       0 => 'field_brochure_link',
       1 => 'field_more_info_webform',
@@ -137,7 +136,7 @@ function unh_destinyone_field_group_info() {
   $field_group->parent_name = 'group_course_tabs';
   $field_group->data = array(
     'label' => 'D1 Certificates',
-    'weight' => '13',
+    'weight' => '14',
     'children' => array(
       0 => 'group_certificate_list',
     ),
@@ -265,7 +264,7 @@ function unh_destinyone_field_group_info() {
   $field_group->parent_name = 'group_course_tabs';
   $field_group->data = array(
     'label' => 'FAQ',
-    'weight' => '14',
+    'weight' => '12',
     'children' => array(
       0 => 'field_faq',
     ),
@@ -375,7 +374,7 @@ function unh_destinyone_field_group_info() {
   $field_group->parent_name = 'group_course_tabs';
   $field_group->data = array(
     'label' => 'Related Items',
-    'weight' => '10',
+    'weight' => '9',
     'children' => array(
       0 => 'field_related_items',
     ),
@@ -432,7 +431,7 @@ function unh_destinyone_field_group_info() {
   $field_group->parent_name = 'group_course_tabs';
   $field_group->data = array(
     'label' => 'Speakers',
-    'weight' => '12',
+    'weight' => '11',
     'children' => array(
       0 => 'field_speakers',
     ),
