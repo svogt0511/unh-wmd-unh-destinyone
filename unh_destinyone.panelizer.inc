@@ -886,6 +886,123 @@ if (empty($field)) {
   $display->content['new-58527424-70c1-49ff-9173-bc75fcf15291'] = $pane;
   $display->panels['lefttop'][9] = 'new-58527424-70c1-49ff-9173-bc75fcf15291';
   $pane = new stdClass();
+  $pane->pid = 'new-22053abe-dfd3-4736-b0e2-bd2058c5f5ec';
+  $pane->panel = 'right';
+  $pane->type = 'entity_field';
+  $pane->subtype = 'node:field_video';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'label' => 'hidden',
+    'formatter' => 'video_embed_field',
+    'delta_limit' => 0,
+    'delta_offset' => '0',
+    'delta_reversed' => FALSE,
+    'formatter_settings' => array(
+      'video_style' => 'normal',
+    ),
+    'context' => 'panelizer',
+    'override_title' => 1,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '22053abe-dfd3-4736-b0e2-bd2058c5f5ec';
+  $display->content['new-22053abe-dfd3-4736-b0e2-bd2058c5f5ec'] = $pane;
+  $display->panels['right'][0] = 'new-22053abe-dfd3-4736-b0e2-bd2058c5f5ec';
+  $pane = new stdClass();
+  $pane->pid = 'new-b0f18525-9519-4316-93fc-4aabe7af3155';
+  $pane->panel = 'right';
+  $pane->type = 'entity_field';
+  $pane->subtype = 'node:field_brochure_link';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'label' => 'hidden',
+    'formatter' => 'link_default',
+    'delta_limit' => 0,
+    'delta_offset' => '0',
+    'delta_reversed' => FALSE,
+    'formatter_settings' => array(),
+    'context' => 'panelizer',
+    'override_title' => 1,
+    'override_title_text' => '',
+    'override_title_heading' => 'span',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'btn btn-primary btn-block brochure-btn',
+  );
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = 'b0f18525-9519-4316-93fc-4aabe7af3155';
+  $display->content['new-b0f18525-9519-4316-93fc-4aabe7af3155'] = $pane;
+  $display->panels['right'][1] = 'new-b0f18525-9519-4316-93fc-4aabe7af3155';
+  $pane = new stdClass();
+  $pane->pid = 'new-fb964696-0154-404a-b639-ca32e34d62ed';
+  $pane->panel = 'right';
+  $pane->type = 'entity_field';
+  $pane->subtype = 'node:field_housing_information';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'label' => 'hidden',
+    'formatter' => 'link_default',
+    'delta_limit' => 0,
+    'delta_offset' => '0',
+    'delta_reversed' => FALSE,
+    'formatter_settings' => array(),
+    'context' => 'panelizer',
+    'override_title' => 1,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'btn btn-primary btn-block brochure-btn',
+  );
+  $pane->extras = array();
+  $pane->position = 2;
+  $pane->locks = array();
+  $pane->uuid = 'fb964696-0154-404a-b639-ca32e34d62ed';
+  $display->content['new-fb964696-0154-404a-b639-ca32e34d62ed'] = $pane;
+  $display->panels['right'][2] = 'new-fb964696-0154-404a-b639-ca32e34d62ed';
+  $pane = new stdClass();
+  $pane->pid = 'new-aebcfc63-4cf4-4e86-9879-0bd6f818a5f0';
+  $pane->panel = 'right';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'course-panel_pane_10';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 3;
+  $pane->locks = array();
+  $pane->uuid = 'aebcfc63-4cf4-4e86-9879-0bd6f818a5f0';
+  $display->content['new-aebcfc63-4cf4-4e86-9879-0bd6f818a5f0'] = $pane;
+  $display->panels['right'][3] = 'new-aebcfc63-4cf4-4e86-9879-0bd6f818a5f0';
+  $pane = new stdClass();
   $pane->pid = 'new-1a86949a-6115-4958-bb54-c0270435047d';
   $pane->panel = 'right';
   $pane->type = 'course_sections_pane';
@@ -916,7 +1033,7 @@ if (empty($field)) {
         'published_code' => 1,
       ),
       'action_button' => 1,
-      'section_locations' => 0,
+      'section_locations' => 1,
       'section_instructors' => 1,
       'section_contact_hours' => 1,
       'section_discounts' => 1,
@@ -927,7 +1044,7 @@ if (empty($field)) {
     ),
     'disp_open' => 0,
     'section_status_noncached' => 0,
-    'form_build_id' => 'form-hpYnSa7N9gHJw7WiNoS3uRcF-wV_9ZbkXJdbbZ26gj0',
+    'form_build_id' => 'form-_1qabrQAzWV6UX5V5R0KWBiLjmBMzCILbnaVVd7tSf4',
     'form_token' => 'NhIXqzghppIY55z_-4HzfWo3GP-GcGvbKvbCLIsDW30',
     'form_id' => 'course_sections_pane_content_type_edit_form',
   );
@@ -937,11 +1054,11 @@ if (empty($field)) {
   );
   $pane->css = array();
   $pane->extras = array();
-  $pane->position = 0;
+  $pane->position = 4;
   $pane->locks = array();
   $pane->uuid = '1a86949a-6115-4958-bb54-c0270435047d';
   $display->content['new-1a86949a-6115-4958-bb54-c0270435047d'] = $pane;
-  $display->panels['right'][0] = 'new-1a86949a-6115-4958-bb54-c0270435047d';
+  $display->panels['right'][4] = 'new-1a86949a-6115-4958-bb54-c0270435047d';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $panelizer->display = $display;

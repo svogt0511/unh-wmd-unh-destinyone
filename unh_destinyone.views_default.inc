@@ -256,336 +256,6 @@ return(d1pdt_courseView_officialCourseDescriptionPane($data->nid));
   $handler->display->display_options['allow']['exposed_form'] = 0;
   $handler->display->display_options['allow']['fields_override'] = 0;
 
-  /* Display: Course Tools and Materials Tab (pane) */
-  $handler = $view->new_display('panel_pane', 'Course Tools and Materials Tab (pane)', 'panel_pane_3');
-  $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Tools & Materials';
-  $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'course-overview';
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Global: View (Course View - Course Tab Header Pane) */
-  $handler->display->display_options['fields']['view']['id'] = 'view';
-  $handler->display->display_options['fields']['view']['table'] = 'views';
-  $handler->display->display_options['fields']['view']['field'] = 'view';
-  $handler->display->display_options['fields']['view']['ui_name'] = 'Global: View (Course View - Course Tab Header Pane)';
-  $handler->display->display_options['fields']['view']['label'] = '';
-  $handler->display->display_options['fields']['view']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['view']['view'] = 'course';
-  $handler->display->display_options['fields']['view']['display'] = 'panel_pane_9';
-  /* Field: Content: Tools & Materials */
-  $handler->display->display_options['fields']['field_tools_materials']['id'] = 'field_tools_materials';
-  $handler->display->display_options['fields']['field_tools_materials']['table'] = 'field_data_field_tools_materials';
-  $handler->display->display_options['fields']['field_tools_materials']['field'] = 'field_tools_materials';
-  $handler->display->display_options['fields']['field_tools_materials']['label'] = '';
-  $handler->display->display_options['fields']['field_tools_materials']['element_label_colon'] = FALSE;
-  $handler->display->display_options['allow']['use_pager'] = 0;
-  $handler->display->display_options['allow']['items_per_page'] = 0;
-  $handler->display->display_options['allow']['offset'] = 0;
-  $handler->display->display_options['allow']['link_to_view'] = 0;
-  $handler->display->display_options['allow']['more_link'] = 0;
-  $handler->display->display_options['allow']['path_override'] = 0;
-  $handler->display->display_options['allow']['title_override'] = 'title_override';
-  $handler->display->display_options['allow']['exposed_form'] = 0;
-  $handler->display->display_options['allow']['fields_override'] = 0;
-
-  /* Display: Course Instructor Bios Tab (pane) */
-  $handler = $view->new_display('panel_pane', 'Course Instructor Bios Tab (pane)', 'panel_pane_5');
-  $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Instructor Bios';
-  $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'course-overview instructor-bios';
-  $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'none';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: View area */
-  $handler->display->display_options['header']['view']['id'] = 'view';
-  $handler->display->display_options['header']['view']['table'] = 'views';
-  $handler->display->display_options['header']['view']['field'] = 'view';
-  $handler->display->display_options['header']['view']['view_to_insert'] = 'course:panel_pane_9';
-  $handler->display->display_options['header']['view']['inherit_arguments'] = TRUE;
-  $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Entity Reference: Referenced Entity (Person) */
-  $handler->display->display_options['relationships']['field_instructor_bio_target_id']['id'] = 'field_instructor_bio_target_id';
-  $handler->display->display_options['relationships']['field_instructor_bio_target_id']['table'] = 'field_data_field_instructor_bio';
-  $handler->display->display_options['relationships']['field_instructor_bio_target_id']['field'] = 'field_instructor_bio_target_id';
-  $handler->display->display_options['relationships']['field_instructor_bio_target_id']['ui_name'] = 'Entity Reference: Referenced Entity (Person)';
-  $handler->display->display_options['relationships']['field_instructor_bio_target_id']['required'] = TRUE;
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Nid */
-  $handler->display->display_options['fields']['nid']['id'] = 'nid';
-  $handler->display->display_options['fields']['nid']['table'] = 'node';
-  $handler->display->display_options['fields']['nid']['field'] = 'nid';
-  $handler->display->display_options['fields']['nid']['relationship'] = 'field_instructor_bio_target_id';
-  $handler->display->display_options['fields']['nid']['label'] = '';
-  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Field: Global: View (Person) */
-  $handler->display->display_options['fields']['view']['id'] = 'view';
-  $handler->display->display_options['fields']['view']['table'] = 'views';
-  $handler->display->display_options['fields']['view']['field'] = 'view';
-  $handler->display->display_options['fields']['view']['ui_name'] = 'Global: View (Person)';
-  $handler->display->display_options['fields']['view']['label'] = '';
-  $handler->display->display_options['fields']['view']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['view']['view'] = 'person';
-  $handler->display->display_options['fields']['view']['display'] = 'panel_pane_1';
-  $handler->display->display_options['fields']['view']['arguments'] = '[!nid]';
-  $handler->display->display_options['allow']['use_pager'] = 0;
-  $handler->display->display_options['allow']['items_per_page'] = 0;
-  $handler->display->display_options['allow']['offset'] = 0;
-  $handler->display->display_options['allow']['link_to_view'] = 0;
-  $handler->display->display_options['allow']['more_link'] = 0;
-  $handler->display->display_options['allow']['path_override'] = 0;
-  $handler->display->display_options['allow']['title_override'] = 'title_override';
-  $handler->display->display_options['allow']['exposed_form'] = 0;
-  $handler->display->display_options['allow']['fields_override'] = 0;
-
-  /* Display: Course Testimonials Tab (pane) */
-  $handler = $view->new_display('panel_pane', 'Course Testimonials Tab (pane)', 'panel_pane_6');
-  $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Testimonials';
-  $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'course-overview testimonials';
-  $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'none';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: View area */
-  $handler->display->display_options['header']['view']['id'] = 'view';
-  $handler->display->display_options['header']['view']['table'] = 'views';
-  $handler->display->display_options['header']['view']['field'] = 'view';
-  $handler->display->display_options['header']['view']['view_to_insert'] = 'course:panel_pane_9';
-  $handler->display->display_options['header']['view']['inherit_arguments'] = TRUE;
-  $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Entity Reference: Referenced Entity (Testimonials) */
-  $handler->display->display_options['relationships']['field_testimonial_target_id']['id'] = 'field_testimonial_target_id';
-  $handler->display->display_options['relationships']['field_testimonial_target_id']['table'] = 'field_data_field_testimonial';
-  $handler->display->display_options['relationships']['field_testimonial_target_id']['field'] = 'field_testimonial_target_id';
-  $handler->display->display_options['relationships']['field_testimonial_target_id']['ui_name'] = 'Entity Reference: Referenced Entity (Testimonials)';
-  $handler->display->display_options['relationships']['field_testimonial_target_id']['required'] = TRUE;
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Nid */
-  $handler->display->display_options['fields']['nid']['id'] = 'nid';
-  $handler->display->display_options['fields']['nid']['table'] = 'node';
-  $handler->display->display_options['fields']['nid']['field'] = 'nid';
-  $handler->display->display_options['fields']['nid']['relationship'] = 'field_testimonial_target_id';
-  $handler->display->display_options['fields']['nid']['label'] = '';
-  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Field: Global: View (Testimonials) */
-  $handler->display->display_options['fields']['view']['id'] = 'view';
-  $handler->display->display_options['fields']['view']['table'] = 'views';
-  $handler->display->display_options['fields']['view']['field'] = 'view';
-  $handler->display->display_options['fields']['view']['ui_name'] = 'Global: View (Testimonials)';
-  $handler->display->display_options['fields']['view']['label'] = '';
-  $handler->display->display_options['fields']['view']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['view']['view'] = 'testimonial';
-  $handler->display->display_options['fields']['view']['display'] = 'panel_pane_1';
-  $handler->display->display_options['fields']['view']['arguments'] = '[!nid]';
-  $handler->display->display_options['allow']['use_pager'] = 0;
-  $handler->display->display_options['allow']['items_per_page'] = 0;
-  $handler->display->display_options['allow']['offset'] = 0;
-  $handler->display->display_options['allow']['link_to_view'] = 0;
-  $handler->display->display_options['allow']['more_link'] = 0;
-  $handler->display->display_options['allow']['path_override'] = 0;
-  $handler->display->display_options['allow']['title_override'] = 'title_override';
-  $handler->display->display_options['allow']['exposed_form'] = 0;
-  $handler->display->display_options['allow']['fields_override'] = 0;
-
-  /* Display: Course Related Items Tab (pane) */
-  $handler = $view->new_display('panel_pane', 'Course Related Items Tab (pane)', 'panel_pane_11');
-  $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Related Items';
-  $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'course-overview';
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Global: View (Course View - Course Tab Header Pane) */
-  $handler->display->display_options['fields']['view']['id'] = 'view';
-  $handler->display->display_options['fields']['view']['table'] = 'views';
-  $handler->display->display_options['fields']['view']['field'] = 'view';
-  $handler->display->display_options['fields']['view']['ui_name'] = 'Global: View (Course View - Course Tab Header Pane)';
-  $handler->display->display_options['fields']['view']['label'] = '';
-  $handler->display->display_options['fields']['view']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['view']['view'] = 'course';
-  $handler->display->display_options['fields']['view']['display'] = 'panel_pane_9';
-  /* Field: Content: Related Items */
-  $handler->display->display_options['fields']['field_related_items']['id'] = 'field_related_items';
-  $handler->display->display_options['fields']['field_related_items']['table'] = 'field_data_field_related_items';
-  $handler->display->display_options['fields']['field_related_items']['field'] = 'field_related_items';
-  $handler->display->display_options['fields']['field_related_items']['label'] = '';
-  $handler->display->display_options['fields']['field_related_items']['element_label_colon'] = FALSE;
-  $handler->display->display_options['allow']['use_pager'] = 0;
-  $handler->display->display_options['allow']['items_per_page'] = 0;
-  $handler->display->display_options['allow']['offset'] = 0;
-  $handler->display->display_options['allow']['link_to_view'] = 0;
-  $handler->display->display_options['allow']['more_link'] = 0;
-  $handler->display->display_options['allow']['path_override'] = 0;
-  $handler->display->display_options['allow']['title_override'] = 'title_override';
-  $handler->display->display_options['allow']['exposed_form'] = 0;
-  $handler->display->display_options['allow']['fields_override'] = 0;
-
-  /* Display: Course Agenda Tab (pane) */
-  $handler = $view->new_display('panel_pane', 'Course Agenda Tab (pane)', 'panel_pane_12');
-  $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Agenda';
-  $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'course-overview';
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Global: View (Course View - Course Tab Header Pane) */
-  $handler->display->display_options['fields']['view']['id'] = 'view';
-  $handler->display->display_options['fields']['view']['table'] = 'views';
-  $handler->display->display_options['fields']['view']['field'] = 'view';
-  $handler->display->display_options['fields']['view']['ui_name'] = 'Global: View (Course View - Course Tab Header Pane)';
-  $handler->display->display_options['fields']['view']['label'] = '';
-  $handler->display->display_options['fields']['view']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['view']['view'] = 'course';
-  $handler->display->display_options['fields']['view']['display'] = 'panel_pane_9';
-  /* Field: Content: Agenda */
-  $handler->display->display_options['fields']['field_agenda']['id'] = 'field_agenda';
-  $handler->display->display_options['fields']['field_agenda']['table'] = 'field_data_field_agenda';
-  $handler->display->display_options['fields']['field_agenda']['field'] = 'field_agenda';
-  $handler->display->display_options['fields']['field_agenda']['label'] = '';
-  $handler->display->display_options['fields']['field_agenda']['element_label_colon'] = FALSE;
-  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-  $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'course' => 'course',
-  );
-  $handler->display->display_options['allow']['use_pager'] = 0;
-  $handler->display->display_options['allow']['items_per_page'] = 0;
-  $handler->display->display_options['allow']['offset'] = 0;
-  $handler->display->display_options['allow']['link_to_view'] = 0;
-  $handler->display->display_options['allow']['more_link'] = 0;
-  $handler->display->display_options['allow']['path_override'] = 0;
-  $handler->display->display_options['allow']['title_override'] = 'title_override';
-  $handler->display->display_options['allow']['exposed_form'] = 0;
-  $handler->display->display_options['allow']['fields_override'] = 0;
-
-  /* Display: Course Speakers Tab (pane) */
-  $handler = $view->new_display('panel_pane', 'Course Speakers Tab (pane)', 'panel_pane_13');
-  $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Speakers';
-  $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'course-overview';
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Global: View (Course View - Course Tab Header Pane) */
-  $handler->display->display_options['fields']['view']['id'] = 'view';
-  $handler->display->display_options['fields']['view']['table'] = 'views';
-  $handler->display->display_options['fields']['view']['field'] = 'view';
-  $handler->display->display_options['fields']['view']['ui_name'] = 'Global: View (Course View - Course Tab Header Pane)';
-  $handler->display->display_options['fields']['view']['label'] = '';
-  $handler->display->display_options['fields']['view']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['view']['view'] = 'course';
-  $handler->display->display_options['fields']['view']['display'] = 'panel_pane_9';
-  /* Field: Content: Speakers */
-  $handler->display->display_options['fields']['field_speakers']['id'] = 'field_speakers';
-  $handler->display->display_options['fields']['field_speakers']['table'] = 'field_data_field_speakers';
-  $handler->display->display_options['fields']['field_speakers']['field'] = 'field_speakers';
-  $handler->display->display_options['fields']['field_speakers']['label'] = '';
-  $handler->display->display_options['fields']['field_speakers']['element_label_colon'] = FALSE;
-  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-  $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'course' => 'course',
-  );
-  $handler->display->display_options['allow']['use_pager'] = 0;
-  $handler->display->display_options['allow']['items_per_page'] = 0;
-  $handler->display->display_options['allow']['offset'] = 0;
-  $handler->display->display_options['allow']['link_to_view'] = 0;
-  $handler->display->display_options['allow']['more_link'] = 0;
-  $handler->display->display_options['allow']['path_override'] = 0;
-  $handler->display->display_options['allow']['title_override'] = 'title_override';
-  $handler->display->display_options['allow']['exposed_form'] = 0;
-  $handler->display->display_options['allow']['fields_override'] = 0;
-
-  /* Display: Course FAQ Tab (pane) */
-  $handler = $view->new_display('panel_pane', 'Course FAQ Tab (pane)', 'panel_pane_15');
-  $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'FAQ';
-  $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'course-overview';
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Global: View (Course View - Course Tab Header Pane) */
-  $handler->display->display_options['fields']['view']['id'] = 'view';
-  $handler->display->display_options['fields']['view']['table'] = 'views';
-  $handler->display->display_options['fields']['view']['field'] = 'view';
-  $handler->display->display_options['fields']['view']['ui_name'] = 'Global: View (Course View - Course Tab Header Pane)';
-  $handler->display->display_options['fields']['view']['label'] = '';
-  $handler->display->display_options['fields']['view']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['view']['view'] = 'course';
-  $handler->display->display_options['fields']['view']['display'] = 'panel_pane_9';
-  /* Field: Content: FAQ */
-  $handler->display->display_options['fields']['field_faq']['id'] = 'field_faq';
-  $handler->display->display_options['fields']['field_faq']['table'] = 'field_data_field_faq';
-  $handler->display->display_options['fields']['field_faq']['field'] = 'field_faq';
-  $handler->display->display_options['fields']['field_faq']['label'] = '';
-  $handler->display->display_options['fields']['field_faq']['element_label_colon'] = FALSE;
-  $handler->display->display_options['allow']['use_pager'] = 0;
-  $handler->display->display_options['allow']['items_per_page'] = 0;
-  $handler->display->display_options['allow']['offset'] = 0;
-  $handler->display->display_options['allow']['link_to_view'] = 0;
-  $handler->display->display_options['allow']['more_link'] = 0;
-  $handler->display->display_options['allow']['path_override'] = 0;
-  $handler->display->display_options['allow']['title_override'] = 'title_override';
-  $handler->display->display_options['allow']['exposed_form'] = 0;
-  $handler->display->display_options['allow']['fields_override'] = 0;
-
-  /* Display: Course Buttons (pane) */
-  $handler = $view->new_display('panel_pane', 'Course Buttons (pane)', 'panel_pane_7');
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Content: Course Code */
-  $handler->display->display_options['fields']['field_course_code']['id'] = 'field_course_code';
-  $handler->display->display_options['fields']['field_course_code']['table'] = 'field_data_field_course_code';
-  $handler->display->display_options['fields']['field_course_code']['field'] = 'field_course_code';
-  $handler->display->display_options['fields']['field_course_code']['label'] = '';
-  $handler->display->display_options['fields']['field_course_code']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_course_code']['element_label_colon'] = FALSE;
-  /* Field: Global: PHP (d1pdt module - Course Buttons) */
-  $handler->display->display_options['fields']['php']['id'] = 'php';
-  $handler->display->display_options['fields']['php']['table'] = 'views';
-  $handler->display->display_options['fields']['php']['field'] = 'php';
-  $handler->display->display_options['fields']['php']['ui_name'] = 'Global: PHP (d1pdt module - Course Buttons)';
-  $handler->display->display_options['fields']['php']['label'] = '';
-  $handler->display->display_options['fields']['php']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['php']['use_php_setup'] = 0;
-  $handler->display->display_options['fields']['php']['php_value'] = '/* Needs to have d1pdt module enabled. */
-return(d1pdt_courseView_buttonsPane($data->nid));';
-  $handler->display->display_options['fields']['php']['php_output'] = '<?=$value?>';
-  $handler->display->display_options['fields']['php']['use_php_click_sortable'] = '0';
-  $handler->display->display_options['fields']['php']['php_click_sortable'] = '';
-
   /* Display: Course Sections (pane) */
   $handler = $view->new_display('panel_pane', 'Course Sections (pane)', 'panel_pane_8');
   $handler->display->display_options['defaults']['title'] = FALSE;
@@ -623,18 +293,9 @@ return(d1pdt_courseView_sectionsPane($data->nid));
   $handler->display->display_options['fields']['php']['use_php_click_sortable'] = '0';
   $handler->display->display_options['fields']['php']['php_click_sortable'] = '';
 
-  /* Display: Course Info (pane) */
-  $handler = $view->new_display('panel_pane', 'Course Info (pane)', 'panel_pane_14');
-  $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'course-details';
+  /* Display: Course Buttons (pane) */
+  $handler = $view->new_display('panel_pane', 'Course Buttons (pane)', 'panel_pane_7');
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Course Code */
-  $handler->display->display_options['fields']['field_course_code']['id'] = 'field_course_code';
-  $handler->display->display_options['fields']['field_course_code']['table'] = 'field_data_field_course_code';
-  $handler->display->display_options['fields']['field_course_code']['field'] = 'field_course_code';
-  $handler->display->display_options['fields']['field_course_code']['label'] = '';
-  $handler->display->display_options['fields']['field_course_code']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_course_code']['element_label_colon'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -643,48 +304,28 @@ return(d1pdt_courseView_sectionsPane($data->nid));
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Global: PHP (d1pdt module - Right Rail Section(s) Info) */
-  $handler->display->display_options['fields']['php']['id'] = 'php';
-  $handler->display->display_options['fields']['php']['table'] = 'views';
-  $handler->display->display_options['fields']['php']['field'] = 'php';
-  $handler->display->display_options['fields']['php']['ui_name'] = 'Global: PHP (d1pdt module - Right Rail Section(s) Info)';
-  $handler->display->display_options['fields']['php']['label'] = '';
-  $handler->display->display_options['fields']['php']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['php']['use_php_setup'] = 0;
-  $handler->display->display_options['fields']['php']['php_value'] = '/* Needs to have d1pdt module enabled. */
-return(d1pdt_courseView_infoPane($data->nid));
-';
-  $handler->display->display_options['fields']['php']['php_output'] = '<?=$value?>';
-  $handler->display->display_options['fields']['php']['use_php_click_sortable'] = '0';
-  $handler->display->display_options['fields']['php']['php_click_sortable'] = '';
-
-  /* Display: Course Tab Header (pane) */
-  $handler = $view->new_display('panel_pane', 'Course Tab Header (pane)', 'panel_pane_9');
-  $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'course-overview';
-  $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Course Code */
   $handler->display->display_options['fields']['field_course_code']['id'] = 'field_course_code';
   $handler->display->display_options['fields']['field_course_code']['table'] = 'field_data_field_course_code';
   $handler->display->display_options['fields']['field_course_code']['field'] = 'field_course_code';
   $handler->display->display_options['fields']['field_course_code']['label'] = '';
+  $handler->display->display_options['fields']['field_course_code']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_course_code']['element_label_colon'] = FALSE;
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title_1']['id'] = 'title_1';
-  $handler->display->display_options['fields']['title_1']['table'] = 'node';
-  $handler->display->display_options['fields']['title_1']['field'] = 'title';
-  $handler->display->display_options['fields']['title_1']['ui_name'] = 'Content: Title';
-  $handler->display->display_options['fields']['title_1']['label'] = '';
-  $handler->display->display_options['fields']['title_1']['element_type'] = 'h2';
-  $handler->display->display_options['fields']['title_1']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['title_1']['link_to_node'] = FALSE;
+  /* Field: Global: PHP (d1pdt module - Course Buttons) */
+  $handler->display->display_options['fields']['php']['id'] = 'php';
+  $handler->display->display_options['fields']['php']['table'] = 'views';
+  $handler->display->display_options['fields']['php']['field'] = 'php';
+  $handler->display->display_options['fields']['php']['ui_name'] = 'Global: PHP (d1pdt module - Course Buttons)';
+  $handler->display->display_options['fields']['php']['label'] = '';
+  $handler->display->display_options['fields']['php']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['php']['use_php_setup'] = 0;
+  $handler->display->display_options['fields']['php']['php_value'] = '/* Needs to have d1pdt module enabled. */
+return(d1pdt_courseView_buttonsPane($data->nid));';
+  $handler->display->display_options['fields']['php']['php_output'] = '<?=$value?>';
+  $handler->display->display_options['fields']['php']['use_php_click_sortable'] = '0';
+  $handler->display->display_options['fields']['php']['php_click_sortable'] = '';
 
   /* Display: Course Info DEBUG (pane) */
   $handler = $view->new_display('panel_pane', 'Course Info DEBUG (pane)', 'panel_pane_16');
@@ -791,6 +432,438 @@ return $ret;
   $handler->display->display_options['fields']['php']['php_output'] = '<?=$value?>';
   $handler->display->display_options['fields']['php']['use_php_click_sortable'] = '0';
   $handler->display->display_options['fields']['php']['php_click_sortable'] = '';
+
+  /* Display: Course Tab Header (pane) */
+  $handler = $view->new_display('panel_pane', 'Course Tab Header (pane)', 'panel_pane_9');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'course-overview';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Course Code */
+  $handler->display->display_options['fields']['field_course_code']['id'] = 'field_course_code';
+  $handler->display->display_options['fields']['field_course_code']['table'] = 'field_data_field_course_code';
+  $handler->display->display_options['fields']['field_course_code']['field'] = 'field_course_code';
+  $handler->display->display_options['fields']['field_course_code']['label'] = '';
+  $handler->display->display_options['fields']['field_course_code']['element_label_colon'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title_1']['id'] = 'title_1';
+  $handler->display->display_options['fields']['title_1']['table'] = 'node';
+  $handler->display->display_options['fields']['title_1']['field'] = 'title';
+  $handler->display->display_options['fields']['title_1']['ui_name'] = 'Content: Title';
+  $handler->display->display_options['fields']['title_1']['label'] = '';
+  $handler->display->display_options['fields']['title_1']['element_type'] = 'h2';
+  $handler->display->display_options['fields']['title_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title_1']['link_to_node'] = FALSE;
+
+  /* Display: Course Info (pane) */
+  $handler = $view->new_display('panel_pane', 'Course Info (pane)', 'panel_pane_14');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'course-details';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Course Code */
+  $handler->display->display_options['fields']['field_course_code']['id'] = 'field_course_code';
+  $handler->display->display_options['fields']['field_course_code']['table'] = 'field_data_field_course_code';
+  $handler->display->display_options['fields']['field_course_code']['field'] = 'field_course_code';
+  $handler->display->display_options['fields']['field_course_code']['label'] = '';
+  $handler->display->display_options['fields']['field_course_code']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_course_code']['element_label_colon'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Global: PHP (d1pdt module - Right Rail Section(s) Info) */
+  $handler->display->display_options['fields']['php']['id'] = 'php';
+  $handler->display->display_options['fields']['php']['table'] = 'views';
+  $handler->display->display_options['fields']['php']['field'] = 'php';
+  $handler->display->display_options['fields']['php']['ui_name'] = 'Global: PHP (d1pdt module - Right Rail Section(s) Info)';
+  $handler->display->display_options['fields']['php']['label'] = '';
+  $handler->display->display_options['fields']['php']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['php']['use_php_setup'] = 0;
+  $handler->display->display_options['fields']['php']['php_value'] = '/* Needs to have d1pdt module enabled. */
+return(d1pdt_courseView_infoPane($data->nid));
+';
+  $handler->display->display_options['fields']['php']['php_output'] = '<?=$value?>';
+  $handler->display->display_options['fields']['php']['use_php_click_sortable'] = '0';
+  $handler->display->display_options['fields']['php']['php_click_sortable'] = '';
+
+  /* Display: Course Agenda Tab (pane) */
+  $handler = $view->new_display('panel_pane', 'Course Agenda Tab (pane)', 'panel_pane_12');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Agenda';
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'course-overview';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Global: View (Course View - Course Tab Header Pane) */
+  $handler->display->display_options['fields']['view']['id'] = 'view';
+  $handler->display->display_options['fields']['view']['table'] = 'views';
+  $handler->display->display_options['fields']['view']['field'] = 'view';
+  $handler->display->display_options['fields']['view']['ui_name'] = 'Global: View (Course View - Course Tab Header Pane)';
+  $handler->display->display_options['fields']['view']['label'] = '';
+  $handler->display->display_options['fields']['view']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['view']['view'] = 'course';
+  $handler->display->display_options['fields']['view']['display'] = 'panel_pane_9';
+  /* Field: Content: Agenda */
+  $handler->display->display_options['fields']['field_agenda']['id'] = 'field_agenda';
+  $handler->display->display_options['fields']['field_agenda']['table'] = 'field_data_field_agenda';
+  $handler->display->display_options['fields']['field_agenda']['field'] = 'field_agenda';
+  $handler->display->display_options['fields']['field_agenda']['label'] = '';
+  $handler->display->display_options['fields']['field_agenda']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'course' => 'course',
+  );
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 0;
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 0;
+
+  /* Display: Course Instructor Bios Tab (pane) */
+  $handler = $view->new_display('panel_pane', 'Course Instructor Bios Tab (pane)', 'panel_pane_5');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Instructor Bios';
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'course-overview instructor-bios';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: View area */
+  $handler->display->display_options['header']['view']['id'] = 'view';
+  $handler->display->display_options['header']['view']['table'] = 'views';
+  $handler->display->display_options['header']['view']['field'] = 'view';
+  $handler->display->display_options['header']['view']['view_to_insert'] = 'course:panel_pane_9';
+  $handler->display->display_options['header']['view']['inherit_arguments'] = TRUE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Entity Reference: Referenced Entity (Person) */
+  $handler->display->display_options['relationships']['field_instructor_bio_target_id']['id'] = 'field_instructor_bio_target_id';
+  $handler->display->display_options['relationships']['field_instructor_bio_target_id']['table'] = 'field_data_field_instructor_bio';
+  $handler->display->display_options['relationships']['field_instructor_bio_target_id']['field'] = 'field_instructor_bio_target_id';
+  $handler->display->display_options['relationships']['field_instructor_bio_target_id']['ui_name'] = 'Entity Reference: Referenced Entity (Person)';
+  $handler->display->display_options['relationships']['field_instructor_bio_target_id']['required'] = TRUE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['relationship'] = 'field_instructor_bio_target_id';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  /* Field: Global: View (Person) */
+  $handler->display->display_options['fields']['view']['id'] = 'view';
+  $handler->display->display_options['fields']['view']['table'] = 'views';
+  $handler->display->display_options['fields']['view']['field'] = 'view';
+  $handler->display->display_options['fields']['view']['ui_name'] = 'Global: View (Person)';
+  $handler->display->display_options['fields']['view']['label'] = '';
+  $handler->display->display_options['fields']['view']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['view']['view'] = 'person';
+  $handler->display->display_options['fields']['view']['display'] = 'panel_pane_1';
+  $handler->display->display_options['fields']['view']['arguments'] = '[!nid]';
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 0;
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 0;
+
+  /* Display: Course Tools and Materials Tab (pane) */
+  $handler = $view->new_display('panel_pane', 'Course Tools and Materials Tab (pane)', 'panel_pane_3');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Tools & Materials';
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'course-overview';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Global: View (Course View - Course Tab Header Pane) */
+  $handler->display->display_options['fields']['view']['id'] = 'view';
+  $handler->display->display_options['fields']['view']['table'] = 'views';
+  $handler->display->display_options['fields']['view']['field'] = 'view';
+  $handler->display->display_options['fields']['view']['ui_name'] = 'Global: View (Course View - Course Tab Header Pane)';
+  $handler->display->display_options['fields']['view']['label'] = '';
+  $handler->display->display_options['fields']['view']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['view']['view'] = 'course';
+  $handler->display->display_options['fields']['view']['display'] = 'panel_pane_9';
+  /* Field: Content: Tools & Materials */
+  $handler->display->display_options['fields']['field_tools_materials']['id'] = 'field_tools_materials';
+  $handler->display->display_options['fields']['field_tools_materials']['table'] = 'field_data_field_tools_materials';
+  $handler->display->display_options['fields']['field_tools_materials']['field'] = 'field_tools_materials';
+  $handler->display->display_options['fields']['field_tools_materials']['label'] = '';
+  $handler->display->display_options['fields']['field_tools_materials']['element_label_colon'] = FALSE;
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 0;
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 0;
+
+  /* Display: Course Testimonials Tab (pane) */
+  $handler = $view->new_display('panel_pane', 'Course Testimonials Tab (pane)', 'panel_pane_6');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Testimonials';
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'course-overview testimonials';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: View area */
+  $handler->display->display_options['header']['view']['id'] = 'view';
+  $handler->display->display_options['header']['view']['table'] = 'views';
+  $handler->display->display_options['header']['view']['field'] = 'view';
+  $handler->display->display_options['header']['view']['view_to_insert'] = 'course:panel_pane_9';
+  $handler->display->display_options['header']['view']['inherit_arguments'] = TRUE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Entity Reference: Referenced Entity (Testimonials) */
+  $handler->display->display_options['relationships']['field_testimonial_target_id']['id'] = 'field_testimonial_target_id';
+  $handler->display->display_options['relationships']['field_testimonial_target_id']['table'] = 'field_data_field_testimonial';
+  $handler->display->display_options['relationships']['field_testimonial_target_id']['field'] = 'field_testimonial_target_id';
+  $handler->display->display_options['relationships']['field_testimonial_target_id']['ui_name'] = 'Entity Reference: Referenced Entity (Testimonials)';
+  $handler->display->display_options['relationships']['field_testimonial_target_id']['required'] = TRUE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['relationship'] = 'field_testimonial_target_id';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  /* Field: Global: View (Testimonials) */
+  $handler->display->display_options['fields']['view']['id'] = 'view';
+  $handler->display->display_options['fields']['view']['table'] = 'views';
+  $handler->display->display_options['fields']['view']['field'] = 'view';
+  $handler->display->display_options['fields']['view']['ui_name'] = 'Global: View (Testimonials)';
+  $handler->display->display_options['fields']['view']['label'] = '';
+  $handler->display->display_options['fields']['view']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['view']['view'] = 'testimonial';
+  $handler->display->display_options['fields']['view']['display'] = 'panel_pane_1';
+  $handler->display->display_options['fields']['view']['arguments'] = '[!nid]';
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 0;
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 0;
+
+  /* Display: Course Related Items Tab (pane) */
+  $handler = $view->new_display('panel_pane', 'Course Related Items Tab (pane)', 'panel_pane_11');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Related Items';
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'course-overview';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Global: View (Course View - Course Tab Header Pane) */
+  $handler->display->display_options['fields']['view']['id'] = 'view';
+  $handler->display->display_options['fields']['view']['table'] = 'views';
+  $handler->display->display_options['fields']['view']['field'] = 'view';
+  $handler->display->display_options['fields']['view']['ui_name'] = 'Global: View (Course View - Course Tab Header Pane)';
+  $handler->display->display_options['fields']['view']['label'] = '';
+  $handler->display->display_options['fields']['view']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['view']['view'] = 'course';
+  $handler->display->display_options['fields']['view']['display'] = 'panel_pane_9';
+  /* Field: Content: Related Items */
+  $handler->display->display_options['fields']['field_related_items']['id'] = 'field_related_items';
+  $handler->display->display_options['fields']['field_related_items']['table'] = 'field_data_field_related_items';
+  $handler->display->display_options['fields']['field_related_items']['field'] = 'field_related_items';
+  $handler->display->display_options['fields']['field_related_items']['label'] = '';
+  $handler->display->display_options['fields']['field_related_items']['element_label_colon'] = FALSE;
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 0;
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 0;
+
+  /* Display: Course Speakers Tab (pane) */
+  $handler = $view->new_display('panel_pane', 'Course Speakers Tab (pane)', 'panel_pane_13');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Speakers';
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'course-overview';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Global: View (Course View - Course Tab Header Pane) */
+  $handler->display->display_options['fields']['view']['id'] = 'view';
+  $handler->display->display_options['fields']['view']['table'] = 'views';
+  $handler->display->display_options['fields']['view']['field'] = 'view';
+  $handler->display->display_options['fields']['view']['ui_name'] = 'Global: View (Course View - Course Tab Header Pane)';
+  $handler->display->display_options['fields']['view']['label'] = '';
+  $handler->display->display_options['fields']['view']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['view']['view'] = 'course';
+  $handler->display->display_options['fields']['view']['display'] = 'panel_pane_9';
+  /* Field: Content: Speakers */
+  $handler->display->display_options['fields']['field_speakers']['id'] = 'field_speakers';
+  $handler->display->display_options['fields']['field_speakers']['table'] = 'field_data_field_speakers';
+  $handler->display->display_options['fields']['field_speakers']['field'] = 'field_speakers';
+  $handler->display->display_options['fields']['field_speakers']['label'] = '';
+  $handler->display->display_options['fields']['field_speakers']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'course' => 'course',
+  );
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 0;
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 0;
+
+  /* Display: Course FAQ Tab (pane) */
+  $handler = $view->new_display('panel_pane', 'Course FAQ Tab (pane)', 'panel_pane_15');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'FAQ';
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'course-overview';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Global: View (Course View - Course Tab Header Pane) */
+  $handler->display->display_options['fields']['view']['id'] = 'view';
+  $handler->display->display_options['fields']['view']['table'] = 'views';
+  $handler->display->display_options['fields']['view']['field'] = 'view';
+  $handler->display->display_options['fields']['view']['ui_name'] = 'Global: View (Course View - Course Tab Header Pane)';
+  $handler->display->display_options['fields']['view']['label'] = '';
+  $handler->display->display_options['fields']['view']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['view']['view'] = 'course';
+  $handler->display->display_options['fields']['view']['display'] = 'panel_pane_9';
+  /* Field: Content: FAQ */
+  $handler->display->display_options['fields']['field_faq']['id'] = 'field_faq';
+  $handler->display->display_options['fields']['field_faq']['table'] = 'field_data_field_faq';
+  $handler->display->display_options['fields']['field_faq']['field'] = 'field_faq';
+  $handler->display->display_options['fields']['field_faq']['label'] = '';
+  $handler->display->display_options['fields']['field_faq']['element_label_colon'] = FALSE;
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 0;
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 0;
+
+  /* Display: Course Required Forms (pane) */
+  $handler = $view->new_display('panel_pane', 'Course Required Forms (pane)', 'panel_pane_10');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = '<none>';
+  $handler->display->display_options['defaults']['query'] = FALSE;
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['query']['options']['distinct'] = TRUE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['empty'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Required Forms */
+  $handler->display->display_options['fields']['field_required_forms']['id'] = 'field_required_forms';
+  $handler->display->display_options['fields']['field_required_forms']['table'] = 'field_data_field_required_forms';
+  $handler->display->display_options['fields']['field_required_forms']['field'] = 'field_required_forms';
+  $handler->display->display_options['fields']['field_required_forms']['label'] = '';
+  $handler->display->display_options['fields']['field_required_forms']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_required_forms']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_required_forms']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_required_forms']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_required_forms']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_required_forms']['separator'] = '<br>';
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="required-forms-block">
+  <div class="card">
+    <div class="card-header required-forms-header">
+      Required Forms
+    </div>
+    <div class="card-block">
+  [field_required_forms]
+    </div>
+  </div>
+</div>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nothing']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['nothing']['hide_alter_empty'] = TRUE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'course' => 'course',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Content: Required Forms (field_required_forms:url) */
+  $handler->display->display_options['filters']['field_required_forms_url']['id'] = 'field_required_forms_url';
+  $handler->display->display_options['filters']['field_required_forms_url']['table'] = 'field_data_field_required_forms';
+  $handler->display->display_options['filters']['field_required_forms_url']['field'] = 'field_required_forms_url';
+  $handler->display->display_options['filters']['field_required_forms_url']['operator'] = 'not empty';
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 0;
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 0;
   $export['course'] = $view;
 
   $view = new view();
