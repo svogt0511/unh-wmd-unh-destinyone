@@ -1339,11 +1339,7 @@ function unh_destinyone_field_default_field_instances() {
   // Exported field_instance: 'node-course-field_more_info_webform'.
   $field_instances['node-course-field_more_info_webform'] = array(
     'bundle' => 'course',
-    'default_value' => array(
-      0 => array(
-        'target_id' => 433,
-      ),
-    ),
+    'default_value' => NULL,
     'default_value_function' => '',
     'deleted' => 0,
     'description' => 'Choose the webform for student to ask for more information.  The course title and number will be supplied to the form if possible.',
@@ -1388,7 +1384,7 @@ function unh_destinyone_field_default_field_instances() {
     'entityconnect_unload_edit' => 1,
     'field_name' => 'field_more_info_webform',
     'label' => 'More Information Form',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'behaviors' => array(
         'prepopulate' => array(
