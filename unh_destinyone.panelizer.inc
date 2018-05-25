@@ -1003,7 +1003,7 @@ if (empty($field)) {
   $display->content['new-aebcfc63-4cf4-4e86-9879-0bd6f818a5f0'] = $pane;
   $display->panels['right'][3] = 'new-aebcfc63-4cf4-4e86-9879-0bd6f818a5f0';
   $pane = new stdClass();
-  $pane->pid = 'new-1a86949a-6115-4958-bb54-c0270435047d';
+  $pane->pid = 'new-ffef3063-1143-4d5c-806c-c7df791e9be2';
   $pane->panel = 'right';
   $pane->type = 'course_sections_pane';
   $pane->subtype = 'course_sections_pane';
@@ -1037,15 +1037,15 @@ if (empty($field)) {
       'section_instructors' => 1,
       'section_contact_hours' => 1,
       'section_discounts' => 1,
-      'section_notes' => 1,
+      'section_notes' => 0,
       'section_ceus' => 1,
       'section_course_code' => 1,
       'section_number' => 1,
     ),
-    'disp_open' => 0,
-    'section_status_noncached' => 0,
-    'form_build_id' => 'form-_1qabrQAzWV6UX5V5R0KWBiLjmBMzCILbnaVVd7tSf4',
-    'form_token' => 'NhIXqzghppIY55z_-4HzfWo3GP-GcGvbKvbCLIsDW30',
+    'disp_open' => 1,
+    'section_status_cached' => 1,
+    'form_build_id' => 'form-NhGRIUYRHtP9WWw9Rfvw7TCzW33OYyXkVv-ZIQAIaiU',
+    'form_token' => 'Laatw_SLeQTjDknwRDkrkj4fHSMPSOr7LJ4CoheXcgw',
     'form_id' => 'course_sections_pane_content_type_edit_form',
   );
   $pane->cache = array();
@@ -1056,9 +1056,9 @@ if (empty($field)) {
   $pane->extras = array();
   $pane->position = 4;
   $pane->locks = array();
-  $pane->uuid = '1a86949a-6115-4958-bb54-c0270435047d';
-  $display->content['new-1a86949a-6115-4958-bb54-c0270435047d'] = $pane;
-  $display->panels['right'][4] = 'new-1a86949a-6115-4958-bb54-c0270435047d';
+  $pane->uuid = 'ffef3063-1143-4d5c-806c-c7df791e9be2';
+  $display->content['new-ffef3063-1143-4d5c-806c-c7df791e9be2'] = $pane;
+  $display->panels['right'][4] = 'new-ffef3063-1143-4d5c-806c-c7df791e9be2';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $panelizer->display = $display;
