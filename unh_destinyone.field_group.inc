@@ -79,8 +79,8 @@ function unh_destinyone_field_group_info() {
     'label' => 'Associated Files and Forms',
     'weight' => '13',
     'children' => array(
-      0 => 'field_brochure_link',
-      1 => 'field_more_info_webform',
+      0 => 'field_more_info_webform',
+      1 => 'field_brochure_link',
       2 => 'field_required_forms',
       3 => 'field_housing_information',
     ),
@@ -166,7 +166,7 @@ function unh_destinyone_field_group_info() {
   $field_group->parent_name = 'group_course_settings';
   $field_group->data = array(
     'label' => 'Course Schedule',
-    'weight' => '58',
+    'weight' => '59',
     'children' => array(
       0 => 'field_course_dates_times',
     ),
@@ -197,13 +197,14 @@ function unh_destinyone_field_group_info() {
     'label' => 'Right Rail Settings',
     'weight' => '65',
     'children' => array(
-      0 => 'field_course_availability',
-      1 => 'field_course_ceus',
-      2 => 'field_course_contact_hours',
-      3 => 'field_course_enrollment_link',
-      4 => 'field_course_location_name',
-      5 => 'field_course_tuition',
-      6 => 'group_course_schedule',
+      0 => 'field_course_enrollment_link',
+      1 => 'field_course_availability',
+      2 => 'field_course_location_name',
+      3 => 'field_course_tuition',
+      4 => 'field_course_contact_hours',
+      5 => 'field_course_ceus',
+      6 => 'field_course_type',
+      7 => 'group_course_schedule',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -402,10 +403,10 @@ function unh_destinyone_field_group_info() {
   $field_group->parent_name = 'group_additional_course_tabs';
   $field_group->data = array(
     'label' => 'Search Settings',
-    'weight' => '66',
+    'weight' => '67',
     'children' => array(
-      0 => 'field_filters',
-      1 => 'field_keywords',
+      0 => 'field_keywords',
+      1 => 'field_filters',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
