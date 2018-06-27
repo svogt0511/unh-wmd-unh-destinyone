@@ -575,7 +575,7 @@ function unh_destinyone_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 57,
+      'weight' => 58,
     ),
   );
 
@@ -731,7 +731,7 @@ function unh_destinyone_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 61,
+      'weight' => 62,
     ),
   );
 
@@ -983,7 +983,7 @@ function unh_destinyone_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 59,
+      'weight' => 60,
     ),
   );
 
@@ -1037,7 +1037,50 @@ function unh_destinyone_field_default_field_instances() {
         'multiple_value_widget' => 'table',
       ),
       'type' => 'number',
-      'weight' => 60,
+      'weight' => 61,
+    ),
+  );
+
+  // Exported field_instance: 'node-course-field_course_type'.
+  $field_instances['node-course-field_course_type'] = array(
+    'bundle' => 'course',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Not required.  Just some additional course attributes.  Online means that the course is taught online.  External partner means that the course is offered through an external partner.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 36,
+      ),
+      'secondary_display' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_course_type',
+    'label' => 'Course Attributes',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 57,
     ),
   );
 
@@ -3465,6 +3508,7 @@ function unh_destinyone_field_default_field_instances() {
   t('Certificate Title');
   t('Choose the webform for student to ask for more information.  The course title and number will be supplied to the form if possible.');
   t('Contact Hours');
+  t('Course Attributes');
   t('Course Availability');
   t('Course Code');
   t('Course Dates/Times');
@@ -3489,6 +3533,7 @@ function unh_destinyone_field_default_field_instances() {
   t('Location');
   t('Middle Initial');
   t('More Information Form');
+  t('Not required.  Just some additional course attributes.  Online means that the course is taught online.  External partner means that the course is offered through an external partner.');
   t('Overview');
   t('Person Name');
   t('Person Order');
